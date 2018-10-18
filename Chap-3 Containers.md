@@ -1,4 +1,4 @@
- 入职以来代码主要使用string/vector/map 等容器进行操作，一些书中提到的小点summary:
+入职以来代码主要使用string/vector/map 等容器进行操作，一些书中提到的小点summary:
  # String
 - **In Cpp, string is a container, while in c string is just char array.**<br>
  
@@ -47,6 +47,16 @@ int main()
 
 - string的比较原则：
 如果两个string的长度不同，并且短的那个字符串每个字符都和长的相同，则短的比长的小。如果随机两个string做比较，则由第一个不同的char比较得出大小。
+
+- string literals: 两个字符串string直接相加会报错，也就是说：
+```
+string str = "this is " + " not correct";
+```
+这种赋值是错误的。
+
+- 使用`[]`访问单个字符，里面的数字大于0且小于`size()`,这个数字是`string::size_type`类型的。如果对不在范围内的字符进行访问，the behavior is undefined。
+
+
 
   
  
